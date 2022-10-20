@@ -1,5 +1,5 @@
 # wc-react-hook
-Simple wrapper to export your react components as web components to make them portable.
+Simple wrapper to export your react components as web components to make them portable. Build on top of https://github.com/bitovi/react-to-webcomponent
 ## Install
 
 ```bash
