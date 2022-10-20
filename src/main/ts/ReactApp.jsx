@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import { customElement } from 'lit/decorators'
 
 @customElement('swc-test-react')
+
 class App extends HTMLElement {
   connectedCallback() {
     const mountPoint = document.createElement('span');

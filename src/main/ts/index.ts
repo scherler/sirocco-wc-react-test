@@ -1,4 +1,1 @@
-import "./ReactApp";
-
-export * from './components/index';
-
+import "./Greeting";

@@ -5,7 +5,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "build": "yarn css:build && yarn build:bundle",
+    "build": " yarn build:bundle",
     "build:bundle": "parcel build --public-url ./ src/main/ts/index.ts --dist-dir ./src/main/webapp/js",
     "css:build": "sirocco-wc buildCss",
     "css:watch": "sirocco-wc watchCss",
@@ -13,7 +13,7 @@
     "prettier": "prettier \"src/main/ts/**/*.ts\" --fix --write",
     "mvnbuild": "yarn build",
     "test": "playwright test",
-    "start": "yarn css:build && concurrently -k -r 'yarn start:server' 'yarn css:watch'",
+    "start": "yarn start:server",
     "start:server": "parcel index.html",
     ":add": "SWC_PREFIX=swc- sirocco-wc add"
   },
@@ -22,9 +22,11 @@
     "axios": "^0.27.2",
     "lit": "^2.3.1",
     "preact": "^10.11.2",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-jsx": "^1.0.0",
+    "react-to-webcomponent": "^2.0.0-alpha.0",
     "sirocco-wc": "0.0.32"
   },
   "devDependencies": {
