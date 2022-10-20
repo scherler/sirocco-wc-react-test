@@ -1,9 +1,15 @@
-import {createRoot} from "react-dom/client";
+import { createRoot } from "react-dom/client";
+import { customElement } from 'lit/decorators'
 
-export function App() {
-  return <h1>Hello world!</h1>;
+@customElement('swc-test-react')
+class App extends HTMLElement {
+  connectedCallback() {
+    const mountPoint = document.createElement('span');
+    this.attachShadow({ mode: 'open' }).appendChild(mountPoint);
+
+    const root = createRoot(mountPoint);
+    root.render(<h1>Hello world!</h1>);
+  }
 }
 
-const app = document.getElementById("app");
-const root = createRoot(app);
-root.render(<App/>);
+export default App;
